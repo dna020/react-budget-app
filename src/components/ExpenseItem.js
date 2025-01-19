@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import './ExpenseItem.css';
 import { MdDelete, MdEdit } from 'react-icons/md';
 
+const ExpenseItem = () => {
+  
+}
+
 export class ExpenseItem extends Component {
   render() {
     return (
@@ -12,7 +16,10 @@ export class ExpenseItem extends Component {
         </div>
         <div>
           <button className='edit-btn'><MdEdit /></button>
-          <button className='clear-btn'><MdDelete /></button>
+          <button className='clear-btn' onClick={() => 
+            this.props.handleDelete(this.props.expense.id)
+          }>
+            <MdDelete /></button>
         </div>
       </li>
     )
